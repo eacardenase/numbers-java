@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
 import java.security.SecureRandom;
@@ -98,7 +99,7 @@ public class MathStuff {
 //        System.out.println(new BigDecimal("0.3145683").multiply(new BigDecimal("5.321")));
 //        System.out.println(new BigDecimal("0.3145683").divide(new BigDecimal("5.321"))); // throws exception
 
-        MathContext context = new MathContext(5, RoundingMode.HALF_UP);
+//        MathContext context = new MathContext(5, RoundingMode.HALF_UP);
 
 //        System.out.println(new BigDecimal("0.3145683").divide(new BigDecimal("5.321"), context));
 //        System.out.println(new BigDecimal("0.3145683").sqrt(context));
@@ -106,11 +107,25 @@ public class MathStuff {
 //        System.out.println(new BigDecimal("0.3145683").min(new BigDecimal("5.321")));
 //        System.out.println(new BigDecimal("-0.3145683").abs());
 //        System.out.println(new BigDecimal("13").remainder(new BigDecimal("8")));
-        System.out.println(new BigDecimal("1").remainder(new BigDecimal("2")));
-        System.out.println(new BigDecimal("2").remainder(new BigDecimal("2")));
-        System.out.println(new BigDecimal("3").remainder(new BigDecimal("2")));
-        System.out.println(new BigDecimal("4").remainder(new BigDecimal("2")));
-        System.out.println(new BigDecimal("5").remainder(new BigDecimal("2")));
+//        System.out.println(new BigDecimal("1").remainder(new BigDecimal("2")));
+//        System.out.println(new BigDecimal("2").remainder(new BigDecimal("2")));
+//        System.out.println(new BigDecimal("3").remainder(new BigDecimal("2")));
+//        System.out.println(new BigDecimal("4").remainder(new BigDecimal("2")));
+//        System.out.println(new BigDecimal("5").remainder(new BigDecimal("2")));
+
+//        BigDecimal num1 = new BigDecimal("201920.21421");
+//        BigDecimal num1 = new BigDecimal(3.141592); // frowned upon
+        BigDecimal num1 = new BigDecimal(3.141592f); // frowned upon
+
+//        byte myByte = num1.byteValue();
+//        System.out.println(num1.doubleValue());
+        System.out.println(num1.intValue());
+
+        String myString = num1.toString();
+
+        System.out.println(myString);
+
+        BigInteger myInt = new BigInteger("123621984986");
     }
 
     /**
