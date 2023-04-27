@@ -21,15 +21,37 @@ public class MathStuff {
 
 //        System.out.println(10 % 2);
 
-        int x = 1;
-        x += 1;
-        x -= 1;
-        x *= 1;
-        x /= 1;
+//        int x = 1;
+//        x += 1;
+//        x -= 1;
+//        x *= 1;
+//        x /= 1;
+//
+//        System.out.println(x);
+//        System.out.println(++x);
+//        System.out.println(x++);
 
-        System.out.println(x);
-        System.out.println(++x);
-        System.out.println(x++);
+//        System.out.println(Math.abs(-10));
+//        System.out.println(Math.ceil(4.6));
+//        System.out.println(Math.floor(4.6));
+//        System.out.println(Math.round(4.6));
+//        System.out.println(Math.round(4.4));
 
+//        int num1 = 4;
+//        int num2 = 7;
+
+//        System.out.println(Math.min(num1, num2));
+//        System.out.println(Math.max(num1, num2));
+//        System.out.println(Math.pow(num1, num2)); // returns a double
+
+//        System.out.println(Math.random());
+//        System.out.println(Math.random() * 10);
+//        System.out.println((int) Math.floor(Math.random() * 100));
+//        System.out.println((int) (Math.random() * 100));
+
+        System.out.println(Math.sqrt(9));
+
+        System.out.println(Math.PI);
+        System.out.println(Math.E);
     }
 }
