@@ -1,3 +1,6 @@
+import java.security.SecureRandom;
+import java.util.Random;
+
 public class MathStuff {
     public static void main(String[] args) {
 //        System.out.println(3 + 5);
@@ -49,9 +52,22 @@ public class MathStuff {
 //        System.out.println((int) Math.floor(Math.random() * 100));
 //        System.out.println((int) (Math.random() * 100));
 
-        System.out.println(Math.sqrt(9));
+//        System.out.println(Math.sqrt(9));
+//
+//        System.out.println(Math.PI);
+//        System.out.println(Math.E);
 
-        System.out.println(Math.PI);
-        System.out.println(Math.E);
+//        Random random = new Random(); // supports a seed as input
+//
+//        System.out.println(random.nextInt(10));
+//        System.out.println(random.nextInt(10));
+//        System.out.println(random.nextInt(10));
+//        System.out.println(random.nextInt(10));
+
+        SecureRandom random = new SecureRandom();
+
+        System.out.println(random.nextInt(10));
+        System.out.println(random.nextInt(10));
+        System.out.println(random.nextInt(10));
     }
 }
