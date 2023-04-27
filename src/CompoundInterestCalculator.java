@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
@@ -24,9 +25,21 @@ public class CompoundInterestCalculator {
     }
 
     public static void main(String[] args) throws ParseException {
+//        DecimalFormat df = new DecimalFormat("#");
+//        DecimalFormat df = new DecimalFormat("#.##");
+//        DecimalFormat df = new DecimalFormat("#,###.##");
+//        DecimalFormat df = new DecimalFormat(",###.##");
+//        DecimalFormat df = new DecimalFormat("$#,###.##");
+        DecimalFormat df = new DecimalFormat("$#,###.##;$(#)");
+
+        DecimalFormat pf = new DecimalFormat("#%");
+
         BigDecimal compoundInterest = CompoundInterestCalculator.calculate("$25,300", "8%", 10, "$7,500");
 
 //        System.out.println(compoundInterest);
-        System.out.println(CompoundInterestCalculator.moneyFormatter.format(compoundInterest)); // $36,075.81
+        System.out.println(df.format(compoundInterest)); // $163,270.02
+        System.out.println(df.format(compoundInterest.negate())); // $(163,270.02)
+
+        System.out.println(pf.format(0.08));
     }
 }
