@@ -78,7 +78,17 @@ public class MathStuff {
 //        System.out.println(pathVelocity);
 //        System.out.println(accel);
 //        System.out.println(calculateCentripetalForce(0.2, accel));
-        System.out.println(calculateCentripetalForce(0.2, 0.8, 3));
+//        System.out.println(calculateCentripetalForce(0.2, 0.8, 3));
+
+        int num1 = 5;
+        int num2 = 3;
+
+        System.out.println(num1 == num2);
+        System.out.println(num1 > num2);
+        System.out.println(num1 < num2);
+        System.out.println(num1 != num2);
+        System.out.println(num1 >= num2);
+        System.out.println(num1 != num2);
     }
 
     /**
