@@ -70,7 +70,15 @@ public class MathStuff {
 //        System.out.println(random.nextInt(10));
 //        System.out.println(random.nextInt(10));
 
-        System.out.println(calculateAreaOfCircle(3));
+//        System.out.println(calculateAreaOfCircle(3));
+
+//        double pathVelocity = calculatePathVelocity(0.8, 3);
+//        double accel = calculateCentripetalAccel(pathVelocity, 0.8);
+//
+//        System.out.println(pathVelocity);
+//        System.out.println(accel);
+//        System.out.println(calculateCentripetalForce(0.2, accel));
+        System.out.println(calculateCentripetalForce(0.2, 0.8, 3));
     }
 
     /**
@@ -81,5 +89,27 @@ public class MathStuff {
      */
     public static double calculateAreaOfCircle(double radius) {
         return Math.PI * Math.pow(radius, 2);
+    }
+
+    private static double calculatePathVelocity(double radius, double period) {
+        double circumference = 2 * Math.PI * radius;
+
+        return circumference / period;
+    }
+
+    private static double calculateCentripetalAccel(double pathVel, double radius) {
+        return Math.pow(pathVel, 2) / radius;
+    }
+
+    private static double calculateCentripetalForce(double mass, double acc) {
+        return mass * acc;
+    }
+
+    public static double calculateCentripetalForce(double mass, double radius, double period) {
+        double pathVelocity = calculatePathVelocity(radius, period);
+        double accel = calculateCentripetalAccel(pathVelocity, radius);
+        double centripetalForce = calculateCentripetalForce(mass, accel);
+
+        return centripetalForce;
     }
 }
