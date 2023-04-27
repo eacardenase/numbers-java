@@ -30,16 +30,24 @@ public class CompoundInterestCalculator {
 //        DecimalFormat df = new DecimalFormat("#,###.##");
 //        DecimalFormat df = new DecimalFormat(",###.##");
 //        DecimalFormat df = new DecimalFormat("$#,###.##");
-        DecimalFormat df = new DecimalFormat("$#,###.##;$(#)");
-
-        DecimalFormat pf = new DecimalFormat("#%");
-
+//        DecimalFormat df = new DecimalFormat("$#,###.##;$(#)");
+//
+//        DecimalFormat pf = new DecimalFormat("#%");
+//
         BigDecimal compoundInterest = CompoundInterestCalculator.calculate("$25,300", "8%", 10, "$7,500");
+//
+////        System.out.println(compoundInterest);
+//        System.out.println(df.format(compoundInterest)); // $163,270.02
+//        System.out.println(df.format(compoundInterest.negate())); // $(163,270.02)
+//
+//        System.out.println(pf.format(0.08));
 
-//        System.out.println(compoundInterest);
-        System.out.println(df.format(compoundInterest)); // $163,270.02
-        System.out.println(df.format(compoundInterest.negate())); // $(163,270.02)
+//        System.out.printf("%f%n", compoundInterest); // %n represents a new line
+//        System.out.printf("$%,.2f%n", compoundInterest); // $163,270.02
+//        System.out.printf("$%,(.2f%n", compoundInterest.negate()); // $(163,270.02)
+//        System.out.format("$%,(.2f%n", compoundInterest.negate()); // $(163,270.02)
 
-        System.out.println(pf.format(0.08));
+        String myStringFormat = String.format("$%,(.2f%n", compoundInterest.negate());
+        System.out.println(myStringFormat); // $(163,270.02)
     }
 }
