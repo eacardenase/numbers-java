@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.security.SecureRandom;
 import java.util.Random;
 
@@ -80,15 +81,15 @@ public class MathStuff {
 //        System.out.println(calculateCentripetalForce(0.2, accel));
 //        System.out.println(calculateCentripetalForce(0.2, 0.8, 3));
 
-        int num1 = 5;
-        int num2 = 3;
+        float num1 = 2.15f;
+        float num2 = 1.10f;
 
-        System.out.println(num1 == num2);
-        System.out.println(num1 > num2);
-        System.out.println(num1 < num2);
-        System.out.println(num1 != num2);
-        System.out.println(num1 >= num2);
-        System.out.println(num1 != num2);
+        System.out.println(num1 - num2); // 1.0500001
+
+        BigDecimal num3 = new BigDecimal("2.15"); // it uses strings to solve the rounding issues
+        BigDecimal num4 = new BigDecimal("1.10");
+
+        System.out.println(num3.subtract(num4)); // 1.05
     }
 
     /**
