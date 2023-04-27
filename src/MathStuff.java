@@ -64,10 +64,22 @@ public class MathStuff {
 //        System.out.println(random.nextInt(10));
 //        System.out.println(random.nextInt(10));
 
-        SecureRandom random = new SecureRandom();
+//        SecureRandom random = new SecureRandom();
+//
+//        System.out.println(random.nextInt(10));
+//        System.out.println(random.nextInt(10));
+//        System.out.println(random.nextInt(10));
 
-        System.out.println(random.nextInt(10));
-        System.out.println(random.nextInt(10));
-        System.out.println(random.nextInt(10));
+        System.out.println(calculateAreaOfCircle(3));
+    }
+
+    /**
+     * This method calculates the area of a circle
+     * It uses the formula: A = PI * r^2
+     * @param radius
+     * @return double
+     */
+    public static double calculateAreaOfCircle(double radius) {
+        return Math.PI * Math.pow(radius, 2);
     }
 }
