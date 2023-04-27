@@ -9,8 +9,16 @@ public class NumberStuff {
         int myInteger = 12; // 32 bits
         long myLong = 12897498; // 64 bits
 
-        System.out.println(myByte);
-        System.out.println(myFlag);
+        float myFloat = 3.141592f;
+        double myDouble = 3.141592;
+
+        float num1 = 2.15f;
+        float num2 = 1.10f;
+
+        byte anotherByte = 0x01 | 0x05 | 0x02; // hexadecimal
+        int anotherInt = 0b01 | 0b10; // binary 3. | it's kind of binary addition
+
+        System.out.println(anotherByte);
 
     }
 }
