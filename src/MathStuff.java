@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.security.SecureRandom;
 import java.util.Random;
 
@@ -81,15 +83,34 @@ public class MathStuff {
 //        System.out.println(calculateCentripetalForce(0.2, accel));
 //        System.out.println(calculateCentripetalForce(0.2, 0.8, 3));
 
-        float num1 = 2.15f;
-        float num2 = 1.10f;
+//        float num1 = 2.15f;
+//        float num2 = 1.10f;
+//
+//        System.out.println(num1 - num2); // 1.0500001
+//
+//        BigDecimal num3 = new BigDecimal("2.15"); // it uses strings to solve the rounding issues
+//        BigDecimal num4 = new BigDecimal("1.10");
+//
+//        System.out.println(num3.subtract(num4)); // 1.05
 
-        System.out.println(num1 - num2); // 1.0500001
+//        System.out.println(new BigDecimal("0.3145683").add(new BigDecimal("5.321")));
+//        System.out.println(new BigDecimal("0.3145683").subtract(new BigDecimal("5.321")));
+//        System.out.println(new BigDecimal("0.3145683").multiply(new BigDecimal("5.321")));
+//        System.out.println(new BigDecimal("0.3145683").divide(new BigDecimal("5.321"))); // throws exception
 
-        BigDecimal num3 = new BigDecimal("2.15"); // it uses strings to solve the rounding issues
-        BigDecimal num4 = new BigDecimal("1.10");
+        MathContext context = new MathContext(5, RoundingMode.HALF_UP);
 
-        System.out.println(num3.subtract(num4)); // 1.05
+//        System.out.println(new BigDecimal("0.3145683").divide(new BigDecimal("5.321"), context));
+//        System.out.println(new BigDecimal("0.3145683").sqrt(context));
+//        System.out.println(new BigDecimal("0.3145683").max(new BigDecimal("5.321")));
+//        System.out.println(new BigDecimal("0.3145683").min(new BigDecimal("5.321")));
+//        System.out.println(new BigDecimal("-0.3145683").abs());
+//        System.out.println(new BigDecimal("13").remainder(new BigDecimal("8")));
+        System.out.println(new BigDecimal("1").remainder(new BigDecimal("2")));
+        System.out.println(new BigDecimal("2").remainder(new BigDecimal("2")));
+        System.out.println(new BigDecimal("3").remainder(new BigDecimal("2")));
+        System.out.println(new BigDecimal("4").remainder(new BigDecimal("2")));
+        System.out.println(new BigDecimal("5").remainder(new BigDecimal("2")));
     }
 
     /**
